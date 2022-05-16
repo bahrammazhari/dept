@@ -1,0 +1,44 @@
+.question-box {
+  position: relative;
+  padding: 1rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  span {
+    font-size: 4rem;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem 3rem 3rem 3rem;
+    position: relative;
+
+    button {
+      font-family: Arial, serif;
+      font-size: 15px;
+      position: absolute;
+      background-color: #1A18F7;
+      color: white;
+      bottom: 0;
+      left: 3rem;
+      padding: .5rem 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .question-box {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    span {
+      font-size: 1.5rem;
+      justify-self: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

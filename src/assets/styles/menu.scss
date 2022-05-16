@@ -24,7 +24,7 @@
       border-width: 0.3em 0 0.3em 0.4em;
       border-color: transparent transparent transparent white;
       position: absolute;
-      left:0;
+      left: 0;
       top: 25%;
     }
   }
@@ -42,8 +42,9 @@
     .title {
       color: #3e3e3e;
     }
+
     .active:before {
-      left:1.5em;
+      left: 1.5em;
     }
   }
 
@@ -92,7 +93,15 @@
               rgba(14, 14, 14, 1) 100%);
     }
   }
+}
 
-  @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
+  .menu {
+    a.active:before {
+      border-width: 0.3em 0.4em 0.3em 0;
+      border-color: transparent white transparent transparent;
+      position: absolute;
+      right: -0.5em;
+    }
   }
 }

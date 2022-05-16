@@ -31,15 +31,6 @@ function Menu() {
                                           className={`/${link}` === pathname ? "active" : ""}>{link === "" ? "HOME" : link?.toUpperCase()}</Link>
                     </li>
                 ))}
-                <li><Link to="/home" className="active">HOME</Link></li>
-                <li><Link to="/work">WORK</Link></li>
-                <li><Link to="/culture">CULTURE</Link></li>
-                <li><Link to="/services">SERVICES</Link></li>
-                <li><Link to="/partners">PARTNERS</Link></li>
-                <li><Link to="/stories">STORIES</Link></li>
-                <li><Link to="/careers">CAREERS</Link></li>
-                <li><Link to="/events">EVENTS</Link></li>
-                <li><Link to="/contact">CONTACT</Link></li>
             </ul>
         </div>
     )

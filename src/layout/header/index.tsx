@@ -6,7 +6,7 @@ import { faCircleXmark } from '@fortawesome/free-regular-svg-icons'
 function Header() {
     const [showMenu,setShowMenu]=useState(false);
     return (
-        <div className={`Navbar ${showMenu&&"menu-open"}`}>
+        <header className={`Navbar ${showMenu?"menu-open":""}`}>
             <div className="logo" >
                 <svg width="100" height="29" viewBox="0 0 100 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M25.5096 13.8975C25.5096 6.85102 21.6628 1.42236 11.884 1.42236H1.42218V26.3726H11.884C21.6628 26.3726 25.5096 20.944 25.5096 13.8975ZM18.3912 13.8975C18.3912 18.8228 15.623 20.6564 11.7762 20.6564H8.21699V7.13864H11.7762C15.623 7.13864 18.3912 8.97215 18.3912 13.8975Z" fill="black"/>
@@ -20,7 +20,7 @@ function Header() {
                 {!showMenu?<>Menu<FontAwesomeIcon icon={faGripLines} size="lg" /></>:<FontAwesomeIcon icon={faCircleXmark} size="2x" inverse />}
             </div>
             {showMenu && <Menu/>}
-        </div>
+        </header>
     )
 }
 

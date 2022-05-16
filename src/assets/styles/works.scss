@@ -109,3 +109,20 @@
     font-size: 0.7rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .Grid {
+    width: 100% !important;
+  }
+
+  .mobile{
+    .work-card{
+      border-bottom: 1px solid #3e3e3e;
+    }
+  }
+
+  .filters {
+    justify-content: center;
+
+  }
+}

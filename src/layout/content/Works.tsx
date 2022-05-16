@@ -53,7 +53,7 @@ function Works() {
                 </div>
 
             </div>
-            <div className="row">
+            <div className={`row${isMobile?" mobile":""}`}>
                 {WORKSDATA.map(work => (
                     <>
                         {(work.industry === industries || industries === "") && (work.category === works || works === "") &&
