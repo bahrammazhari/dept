@@ -34,7 +34,7 @@ function Works() {
                         setWorks(e.target.value);
                     }}>
                         <option value="">all work</option>
-                        <option value="all">some work</option>
+                        <option value="commerce">commerce</option>
                     </select>
                     <span className="select-highlight"/>
                     <span className="select-bar"/>
@@ -45,9 +45,8 @@ function Works() {
                         searchParamsHandler("industries", e.target.value);
                         setIndustries(e.target.value);
                     }}>
-                        <option value="">all industries</option>
-
-                        <option value="good">Good industries</option>
+                            <option value="">all industries</option>
+                            <option value="health">health</option>
                     </select>
                     <span className="select-highlight"/>
                     <span className="select-bar"/>
