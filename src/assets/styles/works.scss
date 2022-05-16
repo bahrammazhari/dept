@@ -1,0 +1,111 @@
+
+.filters {
+  display: flex;
+  justify-content: end;
+}
+
+.view-type {
+  margin:1rem;
+  button {
+    border: 1px solid #3e3e3e;
+    padding: 10px 24px;
+    cursor: pointer;
+    float: left;
+
+
+    &:not(:last-child) {
+      border-right: none;
+    }
+
+    &:hover {
+      background-color: #dddddd;
+    }
+    &.active {
+      background-color: #c2c2c2;
+    }
+
+  }
+
+  &:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+}
+
+.work-card {
+  font-size: 2rem;
+  line-height: 1.5;
+
+  .name {
+    color: gray;
+    font-family: Arial, serif;
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding-top: 1rem;
+  }
+
+  button {
+    font-family: Arial, serif;
+    position: relative;
+    color: blue;
+    background: none !important;
+    border: none;
+    padding: 1rem 0 0 2rem !important;
+    cursor: pointer;
+    text-align: start;
+    font-size: 0.9rem;
+    font-weight: bold;
+    font-stretch: expanded;
+
+    &:before {
+      content: "\A";
+      border-style: solid;
+      border-width: 10px 0 10px 15px;
+      border-color: transparent transparent transparent blue;
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &.Grid {
+    align-self: center;
+    width: calc(50% - 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    img {
+      width: 100%;
+    }
+  }
+  &.Column{
+    display: flex;
+    width: 100%;
+    img{
+      height: 10rem;
+      width: 10rem;
+      padding: 1rem;
+    }
+  }
+}
+.recom {
+  margin: 1rem 2rem;
+  border: solid #DDDDDD;
+  border-width: 1px 0 1px 0;
+
+  .compliment {
+    font-size: 1.5rem;
+  }
+
+  .author {
+    font-family: Arial, serif;
+    font-size: 0.7rem;
+  }
+}
