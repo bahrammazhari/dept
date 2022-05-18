@@ -21,9 +21,11 @@ function Body() {
     return (
         <>
             <Landing isMobile={isMobile}/>
+            <main className="row">
             <Works/>
             <Clients isMobile={isMobile}/>
             <QuestionBox onSubmit={handleSubmit} isMobile={isMobile}/>
+            </main>
         </>)
 }
 

@@ -87,16 +87,16 @@ const CLIENTS:Clients[] = [
 
 function Clients(props:{isMobile:boolean;}) {
     return (
-        <div className="clients">
-            <span className="title">CLIENTS</span>
+        <section className="clients">
+            <h2 className="title">CLIENTS</h2>
             <p>We value a great working relationship with our clients above all else. It’s why they often come to our
                 parties. It’s also why we’re able to challenge and inspire them to reach for the stars.</p>
             <div className="row icons">
                 {CLIENTS.map((client, index) => (
-                    (!props.isMobile ||index<6) && <img src={client.image} alt={client.name} className="icon" key={index}/>
+                    (!props.isMobile ||index<6) && <img width={64} height={30} src={client.image} alt={client.name} className="icon" key={index}/>
                 ))}
             </div>
-        </div>
+        </section>
     )
 }
 

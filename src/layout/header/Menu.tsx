@@ -5,7 +5,7 @@ function Menu() {
     let {pathname} = useLocation();
     const LINKS: string[] = ["", "work", "culture", "services", "partners", "stories", "careers", "events", "contact"];
     return (
-        <div className="menu">
+        <nav className="menu">
             {!isMobile && <>
                 <div className="landen">
                     <a href="#" className="title">Landen</a>
@@ -32,7 +32,7 @@ function Menu() {
                     </li>
                 ))}
             </ul>
-        </div>
+        </nav>
     )
 }
 export default Menu;

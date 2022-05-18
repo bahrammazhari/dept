@@ -21,8 +21,10 @@ function Works() {
     }
 
     return (
-        <div className="row">
-            {!isMobile&&<div className="view-type">
+        <section className="row">
+            <h2 hidden>Works</h2>
+            {!isMobile&&
+            <div className="view-type">
                 <button onClick={()=>setViewType("Grid")} className={viewType==="Grid"?"active":""}><FontAwesomeIcon icon={faGripVertical}/>Grid</button>
                 <button onClick={()=>setViewType("Column")} className={viewType==="Column"?"active":""}><FontAwesomeIcon icon={faList}/>List</button>
             </div>}
@@ -64,7 +66,7 @@ function Works() {
                         </div>)}
                     </>))}
             </div>
-        </div>)
+        </section>)
 }
 
 export default Works;

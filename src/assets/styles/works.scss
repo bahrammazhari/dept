@@ -36,43 +36,45 @@
 
 .work-card {
   font-size: 2rem;
-  line-height: 1.5;
-
-  .name {
-    color: gray;
-    font-family: Arial, serif;
-    font-size: 0.95rem;
-    font-weight: bold;
-    padding-top: 1rem;
-  }
-
-  button {
-    font-family: Arial, serif;
-    position: relative;
-    color: blue;
-    background: none !important;
-    border: none;
-    padding: 1rem 0 0 2rem !important;
-    cursor: pointer;
-    text-align: start;
-    font-size: 0.9rem;
-    font-weight: bold;
-    font-stretch: expanded;
-
-    &:before {
-      content: "\A";
-      border-style: solid;
-      border-width: 10px 0 10px 15px;
-      border-color: transparent transparent transparent blue;
-      position: absolute;
-      left: 0;
-    }
+  figure{
+    margin: 0;
   }
 
   .card-body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    .title {
+      color: gray;
+      font-family: Arial, serif;
+      font-size: 0.95rem;
+      padding-top: 0.5rem;
+    }
+    .body{
+      margin: 0;
+    }
+    button {
+      font-family: Arial, serif;
+      position: relative;
+      color: blue;
+      background: none !important;
+      border: none;
+      padding: 1rem 0 0 2rem !important;
+      cursor: pointer;
+      text-align: start;
+      font-size: 0.9rem;
+      font-weight: bold;
+      font-stretch: expanded;
+
+      &:before {
+        content: "\A";
+        border-style: solid;
+        border-width: 10px 0 10px 15px;
+        border-color: transparent transparent transparent blue;
+        position: absolute;
+        left: 0;
+      }
+    }
   }
   &.Grid {
     align-self: center;
@@ -83,15 +85,21 @@
     padding: 2rem;
     img {
       width: 100%;
+      height: auto;
     }
   }
   &.Column{
-    display: flex;
     width: 100%;
-    img{
-      height: 10rem;
-      width: 10rem;
-      padding: 1rem;
+    article {
+      display: flex;
+      img {
+        height: 10rem;
+        width: 10rem;
+        padding: 1rem;
+      }
+      .card-body{
+        margin-left: 1rem;
+      }
     }
   }
 }

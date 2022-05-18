@@ -3,8 +3,8 @@ import React, {FormEvent} from "react";
 function QuestionBox({onSubmit,...props}:{isMobile:boolean;onSubmit:(e:FormEvent<HTMLFormElement>)=>void}) {
 
     return (
-        <div className="question-box">
-            <span>QUESTION?{!props.isMobile &&(<br/>)} WE ARE HERE TO HELP!</span>
+        <section className="question-box">
+            <h2 className="title">QUESTION?{!props.isMobile &&(<br/>)} WE ARE HERE TO HELP!</h2>
             <form onSubmit={onSubmit}>
                 <label className="has-float-label">
                     <input placeholder="" type="text" pattern="[a-z A-Z!@#$%^&*0-9]{1,}"/>
@@ -24,7 +24,7 @@ function QuestionBox({onSubmit,...props}:{isMobile:boolean;onSubmit:(e:FormEvent
                 </label>
                 <button type="submit">SEND</button>
             </form>
-        </div>
+        </section>
     )
 }
 

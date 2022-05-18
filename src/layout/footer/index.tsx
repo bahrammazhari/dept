@@ -11,7 +11,7 @@ function Footer(){
         <footer>
             <div className="back-to-top" onClick={()=>{window.scroll(0,0)}}><img src={arrow} alt="^"/>top</div>
             <div className="row">
-                <div className="button-menu">
+                <nav className="button-menu">
                     {!isMobile&&<img src={logo} alt="DEPT"/>}
                     <ul>
                         <li>WORK</li>
@@ -21,7 +21,7 @@ function Footer(){
                         <li>CAREERS</li>
                         <li>CONTACT</li>
                     </ul>
-                </div>
+                </nav>
                 <div className="social">
                     <img src={facebook} alt="facebook"/>
                     <img src={twitter} alt="twitter"/>
