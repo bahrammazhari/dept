@@ -7,7 +7,7 @@ function QuestionBox({onSubmit,...props}:{isMobile:boolean;onSubmit:(e:FormEvent
             <span>QUESTION?{!props.isMobile &&(<br/>)} WE ARE HERE TO HELP!</span>
             <form onSubmit={onSubmit}>
                 <label className="has-float-label">
-                    <input placeholder="" type="text" pattern="[a-zA-Z!@#$%^&*0-9]"/>
+                    <input placeholder="" type="text" pattern="[a-z A-Z!@#$%^&*0-9]{1,}"/>
                     <span className="label">Name</span>
                     <div className="error">Do not use special characters !</div>
                 </label>
@@ -18,7 +18,7 @@ function QuestionBox({onSubmit,...props}:{isMobile:boolean;onSubmit:(e:FormEvent
                     <div className="error">Please enter a valid email !</div>
                 </label>
                 <label className="has-float-label">
-                    <textarea placeholder="" rows={4} cols={24}/>
+                    <textarea placeholder="" rows={3} cols={23}/>
                     <span className="label">MESSAGE</span>
                     <div className="error">Do not use special characters !</div>
                 </label>
