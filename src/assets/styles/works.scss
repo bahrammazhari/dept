@@ -10,9 +10,9 @@
     border: 1px solid #3e3e3e;
     padding: 10px 24px;
     cursor: pointer;
-    float: left;
-
-
+    svg{
+      padding:0 0.5rem;
+    }
     &:not(:last-child) {
       border-right: none;
     }
