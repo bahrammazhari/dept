@@ -3,9 +3,10 @@ import {useWindowSize} from "../../hooks/WindowsSize";
 /**
  * Menu of the app
  * containing social media and routes
+ * @param setShowMenu parent state for menu visibility
  * @component
  */
-function Menu() {
+function Menu({setShowMenu}:{setShowMenu:(state:boolean)=>void}) {
     /**
      * @property {boolean} isMobile Defines whether clients device is a mobile or not see {@link useWindowSize}
      */
@@ -43,7 +44,7 @@ function Menu() {
             <ul className="main">
                 <div className="fade"/>
                 {LINKS.map((link, index) => (
-                    <li key={index}><Link to={`/${link}`}
+                    <li key={index} onClick={()=>{setShowMenu(false)}}><Link to={`/${link}`}
                                           className={`/${link}` === pathname ? "active" : ""}>{link === "" ? "HOME" : link?.toUpperCase()}</Link>
                     </li>
                 ))}

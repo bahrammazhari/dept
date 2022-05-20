@@ -27,7 +27,7 @@ function Header() {
             <div className="menu-icon" onClick={()=>{setShowMenu(!showMenu)}}>
                 {!showMenu?<>Menu<FontAwesomeIcon icon={faGripLines} size="lg" /></>:<FontAwesomeIcon icon={faCircleXmark} size="2x" inverse />}
             </div>
-            {showMenu && <Menu/>}
+            {showMenu && <Menu setShowMenu={setShowMenu}/>}
         </header>
     )
 }
