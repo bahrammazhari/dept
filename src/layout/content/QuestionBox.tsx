@@ -1,5 +1,11 @@
 import React, {FormEvent} from "react";
 
+/**
+ * it is a component for ticketing, it contains several inputs
+ * @param onSubmit it is the submitting function
+ * @param props it gets the rest of the properties received from parent(we only use {@link isMobile})
+ * @component
+ */
 function QuestionBox({onSubmit,...props}:{isMobile:boolean;onSubmit:(e:FormEvent<HTMLFormElement>)=>void}) {
 
     return (

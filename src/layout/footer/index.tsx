@@ -4,8 +4,14 @@ import twitter from "../../assets/images/twitter.svg"
 import facebook from "../../assets/images/facebook.svg"
 import arrow from "../../assets/images/arrow_up.svg"
 import {useWindowSize} from "../../hooks/WindowsSize";
+/**
+ * It contains the footer of the app
+ * @component
+ */
 function Footer(){
-
+    /**
+     * @property {boolean} isMobile Defines whether clients device is a mobile or not see {@link useWindowSize}
+     */
     const isMobile:boolean=useWindowSize();
     return (
         <footer>

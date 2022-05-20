@@ -3,7 +3,15 @@ import Menu from "./Menu";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGripLines } from '@fortawesome/free-solid-svg-icons'
 import { faCircleXmark } from '@fortawesome/free-regular-svg-icons'
+/**
+ * It contains the top bar of the app
+ * {@link Menu} is wrapped in this component
+ * @component
+ */
 function Header() {
+    /**
+     * @property {boolean} showMenu a state which indicates the menu visibility status
+     */
     const [showMenu,setShowMenu]=useState(false);
     return (
         <header className={`Navbar ${showMenu?"menu-open":""}`}>

@@ -14,10 +14,15 @@ import unilever from "../../assets/images/clients/unilever.svg"
 import walibi from "../../assets/images/clients/walibi.svg"
 import zalando from "../../assets/images/clients/zalando.svg"
 import ziggo from "../../assets/images/clients/ziggo.svg"
-interface Clients{
+export interface Clients{
     name:string;
     image:string;
 }
+
+/**
+ * CLIENTS - A list of clients
+ * @type {Array<Clients>}
+ */
 const CLIENTS:Clients[] = [
     {
         name: "nivea",
@@ -85,6 +90,11 @@ const CLIENTS:Clients[] = [
     },
 ]
 
+/**
+ * It Shows the Clients
+ * @param props - it gets the clients device type from parent by {@link isMobile}
+ * @component
+ */
 function Clients(props:{isMobile:boolean;}) {
     return (
         <section className="clients">

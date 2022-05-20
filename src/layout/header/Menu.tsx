@@ -1,8 +1,24 @@
 import {Link,useLocation} from "react-router-dom";
 import {useWindowSize} from "../../hooks/WindowsSize";
+/**
+ * Menu of the app
+ * containing social media and routes
+ * @component
+ */
 function Menu() {
+    /**
+     * @property {boolean} isMobile Defines whether clients device is a mobile or not see {@link useWindowSize}
+     */
     const isMobile: boolean = useWindowSize();
+    /**
+     * @property {string} pathname shows the current route of app
+     * App check the active menu with this
+     */
     let {pathname} = useLocation();
+    /**
+     * @property {Array<string>} LINKS list of all available main routes to navigate
+     * App generates the menu links with this
+     */
     const LINKS: string[] = ["", "work", "culture", "services", "partners", "stories", "careers", "events", "contact"];
     return (
         <nav className="menu">

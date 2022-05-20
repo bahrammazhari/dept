@@ -7,13 +7,40 @@ import {faGripVertical, faList} from '@fortawesome/free-solid-svg-icons'
 import {useWindowSize} from "../../hooks/WindowsSize";
 import {getAllWorks} from "../../Services/Works";
 
+/**
+ * it shows the work sample section of the App
+ * @component
+ */
 function Works() {
+    /**
+     * @property {boolean} isMobile Defines whether clients device is a mobile or not see {@link useWindowSize}
+     */
     const isMobile: boolean = useWindowSize();
+    /**
+     * @property {URLSearchParams} searchParams it gets the url query search params {@link useSearchParams}
+     */
     const [searchParams, setSearchParams] = useSearchParams();
+    /**
+     * @property {Array<Works>} worksData it is a state holding the result of fetched works {@link getAllWorks}
+     */
     const [worksData, setWorksData] = useState<Works[]>([]);
+    /**
+     * @property {string} works it is a state representing work category filter
+     */
     const [works, setWorks] = useState((searchParams.get("works") ?? "").toLowerCase());
+    /**
+     * @property {string} industries it is a state representing work industry filter
+     */
     const [industries, setIndustries] = useState((searchParams.get("industries") ?? "").toLowerCase());
+    /**
+     * @property {"Grid" | "Column"} viewType it is a state representing work presentation style
+     */
     const [viewType, setViewType] = useState<"Grid" | "Column">("Grid");
+    /**
+     * the function to update the url query params
+     * @param param the parameter to be changed
+     * @param value the value to be changed
+     */
     const searchParamsHandler = (param: "works" | "industries", value: string) => {
         const filter = {
             works,
@@ -22,7 +49,9 @@ function Works() {
         filter[param] = value;
         setSearchParams(filter);
     }
-
+    /**
+     * getting works data on component firs load
+     */
     useEffect(() => {
         getAllWorks().then(result => {
             if (result)
@@ -71,7 +100,11 @@ function Works() {
             <div className={`row${isMobile ? " mobile" : ""}`}>
                 {worksData.map((work, index) => (
                     <React.Fragment key={index}>
-                        {(work.industry === industries || industries === "") && (work.category === works || works === "") &&
+                        {
+                            /**
+                             * the filtering and grouping happens here
+                             */
+                            (work.industry === industries || industries === "") && (work.category === works || works === "") &&
                         <Card viewType={viewType} info={work} key={work.id}/>}
                         {(work.id === 16 && <div key="recom" className="recom">
                             <p className="compliment">{RECOMOFDAY.compliment}</p>

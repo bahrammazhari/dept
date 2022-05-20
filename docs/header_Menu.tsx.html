@@ -1,0 +1,166 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> header/Menu.tsx</title>
+
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="./build/entry.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700|Inconsolata,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://jmblog.github.io/color-themes-for-google-code-prettify/themes/tomorrow-night.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/app.min.css">
+  <link type="text/css" rel="stylesheet" href="styles/iframe.css">
+  <link type="text/css" rel="stylesheet" href="">
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  
+</head>
+
+
+
+<body class="layout small-header">
+    <div id="stickyNavbarOverlay"></div>
+    
+
+<div class="top-nav">
+    <div class="inner">
+        <a id="hamburger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+        <div class="logo">
+            
+            
+        </div>
+        <div class="menu">
+            
+            <div class="navigation">
+                <a
+                    href="index.html"
+                    class="link"
+                >
+                    Documentation
+                </a>
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="main">
+        <div
+            class="sidebar "
+            id="sidebarNav"
+        >
+            
+            <nav>
+                
+                    <h2><a href="index.html">Documentation</a></h2><div class="category"><h3>Components</h3><ul><li><a href="Footer.html">Footer</a></li><li><a href="Header.html">Header</a></li><li><a href="Layout.html">Layout</a></li><li><a href="Menu.html">Menu</a></li></ul></div>
+                
+            </nav>
+        </div>
+        <div class="core" id="main-content-wrapper">
+            <div class="content">
+                <header class="page-title">
+                    <p>Source</p>
+                    <h1>header/Menu.tsx</h1>
+                </header>
+                
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import {Link,useLocation} from "react-router-dom";
+import {useWindowSize} from "../../hooks/WindowsSize";
+/**
+ * Menu of the app
+ * containing social media and routes
+ * @component
+ */
+function Menu() {
+    /**
+     * @property {boolean} isMobile Defines whether clients device is a mobile or not see {@link useWindowSize}
+     */
+    const isMobile: boolean = useWindowSize();
+    /**
+     * @property {string} pathname shows the current route of app
+     * App check the active menu with this
+     */
+    let {pathname} = useLocation();
+    /**
+     * @property {Array&lt;string>} LINKS list of all available main routes to navigate
+     * App generates the menu links with this
+     */
+    const LINKS: string[] = ["", "work", "culture", "services", "partners", "stories", "careers", "events", "contact"];
+    return (
+        &lt;nav className="menu">
+            {!isMobile &amp;&amp; &lt;>
+                &lt;div className="landen">
+                    &lt;a href="#" className="title">Landen&lt;/a>
+                    &lt;a href="#">GLOBAL&lt;/a>
+                    &lt;a href="#" className="active">NEDERLAND&lt;/a>
+                    &lt;a href="#">UNITED STATES&lt;/a>
+                    &lt;a href="#">IRELAND&lt;/a>
+                    &lt;a href="#">UNITED KINGDOM&lt;/a>
+                    &lt;a href="#">DEUTSCHLAND&lt;/a>
+                    &lt;a href="#">SCHWEIZ&lt;/a>
+                &lt;/div>
+                &lt;div className="social-media">
+                    &lt;a href="https://www.facebook.com/DeptAgency/">FACEBOOK&lt;/a>
+                    &lt;a href="https://twitter.com/deptagency?lang=en">TWITTER&lt;/a>
+                    &lt;a href="https://www.instagram.com/deptagency/?hl=en">INSTAGRAM&lt;/a>
+                    &lt;a href="https://www.linkedin.com/company/deptagency">LINKEDIN&lt;/a>
+                &lt;/div>
+            &lt;/>}
+            &lt;ul className="main">
+                &lt;div className="fade"/>
+                {LINKS.map((link, index) => (
+                    &lt;li key={index}>&lt;Link to={`/${link}`}
+                                          className={`/${link}` === pathname ? "active" : ""}>{link === "" ? "HOME" : link?.toUpperCase()}&lt;/Link>
+                    &lt;/li>
+                ))}
+            &lt;/ul>
+        &lt;/nav>
+    )
+}
+export default Menu;</code></pre>
+        </article>
+    </section>
+
+
+
+
+            </div>
+            
+            <footer class="footer">
+                <div class="content has-text-centered">
+                    <p>Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a></p>
+                </div>
+            </footer>
+            
+        </div>
+        <div id="side-nav" class="side-nav">
+        </div>
+    </div>
+<script src="scripts/app.min.js"></script>
+<script>PR.prettyPrint();</script>
+<script src="scripts/linenumber.js"> </script>
+
+
+</body>
+</html>
