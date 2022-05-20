@@ -8,6 +8,7 @@
   left: 0;
   z-index: -1;
   padding-top: 3rem;
+
   a {
     position: relative;
     color: white;
@@ -96,11 +97,15 @@
 
 @media screen and (max-width: 768px) {
   .menu {
-    a.active:before {
-      border-width: 0.3em 0.4em 0.3em 0;
-      border-color: transparent white transparent transparent;
-      position: absolute;
-      right: -0.5em;
+    a {
+      font-size: 20vw;
+
+      &.active:before {
+        border-width: 0.3em 0.4em 0.3em 0;
+        border-color: transparent white transparent transparent;
+        position: absolute;
+        right: -0.5em;
+      }
     }
   }
 }
